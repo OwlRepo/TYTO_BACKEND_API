@@ -10,8 +10,9 @@ app.use(logs);
 // index html
 app.use(express.static('./public'))
 app.use('/css', express.static(__dirname + 'public/css'))
-app.use('/js', express.static(__dirname + 'public/js'))
 app.use('/img', express.static(__dirname + 'public/img'))
+app.use('/js', express.static(__dirname + 'public/js'))
+
 
 //views
 app.set('views', './views')
@@ -19,7 +20,7 @@ app.set('view engine', 'ejs')
 
 
 app.get('/api', (req, res) => {
-res.render('index') 
+res.render('indexx') 
 });
 app.use('/api', router);
 const PORT = process.env.PORT || 5000;
